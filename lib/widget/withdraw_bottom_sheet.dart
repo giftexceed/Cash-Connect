@@ -30,7 +30,7 @@ class _WithdrawBottomSheetState extends State<WithdrawBottomSheet> {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 4),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.only(
+        borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(80), topRight: Radius.circular(80)), //
         color: Colors.grey.shade50,
       ),
@@ -56,39 +56,37 @@ class _WithdrawBottomSheetState extends State<WithdrawBottomSheet> {
                       });
                       return null;
                     },
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       // enabledBorder: OutlineInputBorder(),
                       // contentPadding: EdgeInsets.zero,
                       hintText: 'Enter amount you want to withdraw',
                       prefixIcon: Icon(
                         Icons.money,
-                        color: Theme.of(context).primaryColor,
+                        color: Colors.blueGrey,
                       ),
-                      labelStyle: const TextStyle(color: Colors.black),
-                      contentPadding: const EdgeInsets.symmetric(
-                          vertical: 15, horizontal: 20),
-                      enabledBorder: const OutlineInputBorder(
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(30.0)),
+                      labelStyle: TextStyle(color: Colors.black),
+                      contentPadding:
+                          EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+                      enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(30.0)),
                           borderSide: BorderSide(
-                            color: Colors.deepOrangeAccent,
+                            color: Colors.blueGrey,
                             width: 2,
                           )),
                       focusedBorder: OutlineInputBorder(
-                        borderRadius:
-                            const BorderRadius.all(const Radius.circular(30.0)),
-                        borderSide: BorderSide(
-                            color: Theme.of(context).primaryColor, width: 2),
+                        borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                        borderSide:
+                            BorderSide(color: Colors.blueGrey, width: 2),
                       ),
-                      focusColor: Theme.of(context).primaryColor,
+                      focusColor: Colors.blueGrey,
                     )),
               ),
               Container(
                 margin: const EdgeInsets.symmetric(vertical: 35),
                 child: isApiCall
-                    ? CircularProgressIndicator(
-                        valueColor: AlwaysStoppedAnimation<Color>(
-                            Theme.of(context).primaryColor),
+                    ? const CircularProgressIndicator(
+                        valueColor:
+                            AlwaysStoppedAnimation<Color>(Colors.blueGrey),
                         // backgroundColor: Colors.transparent,
                       )
                     : CustomFlatButton(

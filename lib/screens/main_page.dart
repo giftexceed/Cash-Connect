@@ -68,12 +68,14 @@ class _MainScreenState extends State<MainScreen> {
               label: 'Accounts',
             ),
             BottomNavigationBarItem(
-              icon: Icon(_selectedIndex == 3 ? Icons.money : Icons.money),
-              label: 'Investments & Loans',
+              icon: Icon(_selectedIndex == 3
+                  ? Icons.currency_exchange
+                  : Icons.currency_exchange),
+              label: 'Investments',
             ),
           ],
           currentIndex: _selectedIndex,
-          selectedItemColor: Theme.of(context).primaryColor,
+          selectedItemColor: Colors.blue,
           showUnselectedLabels: true,
           unselectedItemColor: Colors.black54,
           onTap: _onItemTapped,

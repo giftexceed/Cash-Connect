@@ -64,7 +64,7 @@ class _TransferBottomSheetState extends State<TransferBottomSheet> {
                       hintText: 'Phone Number',
                       prefixIcon: Icon(
                         Icons.phone_android,
-                        color: Theme.of(context).primaryColor,
+                        color: Colors.blueGrey,
                       ),
                       labelStyle: const TextStyle(color: Colors.black),
                       contentPadding: const EdgeInsets.symmetric(
@@ -73,16 +73,16 @@ class _TransferBottomSheetState extends State<TransferBottomSheet> {
                           borderRadius:
                               const BorderRadius.all(Radius.circular(30.0)),
                           borderSide: BorderSide(
-                            color: Colors.deepOrangeAccent,
+                            color: Colors.blue,
                             width: 2,
                           )),
                       focusedBorder: OutlineInputBorder(
                         borderRadius:
                             const BorderRadius.all(const Radius.circular(30.0)),
-                        borderSide: BorderSide(
-                            color: Theme.of(context).primaryColor, width: 2),
+                        borderSide:
+                            BorderSide(color: Colors.blueGrey, width: 2),
                       ),
-                      focusColor: Theme.of(context).primaryColor,
+                      focusColor: Colors.blueGrey,
                     )),
               ),
               _services.sizedBox(h: 20),
@@ -106,7 +106,7 @@ class _TransferBottomSheetState extends State<TransferBottomSheet> {
                       hintText: 'Amount',
                       prefixIcon: Icon(
                         Icons.money,
-                        color: Theme.of(context).primaryColor,
+                        color: Colors.blueGrey,
                       ),
                       labelStyle: const TextStyle(color: Colors.black),
                       contentPadding: const EdgeInsets.symmetric(
@@ -115,24 +115,24 @@ class _TransferBottomSheetState extends State<TransferBottomSheet> {
                           borderRadius:
                               const BorderRadius.all(Radius.circular(30.0)),
                           borderSide: BorderSide(
-                            color: Colors.deepOrangeAccent,
+                            color: Colors.blue,
                             width: 2,
                           )),
                       focusedBorder: OutlineInputBorder(
                         borderRadius:
                             const BorderRadius.all(const Radius.circular(30.0)),
-                        borderSide: BorderSide(
-                            color: Theme.of(context).primaryColor, width: 2),
+                        borderSide:
+                            BorderSide(color: Colors.blueGrey, width: 2),
                       ),
-                      focusColor: Theme.of(context).primaryColor,
+                      focusColor: Colors.blueGrey,
                     )),
               ),
               Container(
                 margin: const EdgeInsets.symmetric(vertical: 35),
                 child: isApiCall
                     ? CircularProgressIndicator(
-                        valueColor: AlwaysStoppedAnimation<Color>(
-                            Theme.of(context).primaryColor),
+                        valueColor:
+                            AlwaysStoppedAnimation<Color>(Colors.blueGrey),
                         // backgroundColor: Colors.transparent,
                       )
                     : CustomFlatButton(

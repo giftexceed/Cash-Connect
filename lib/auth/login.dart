@@ -59,31 +59,30 @@ class _LoginScreenState extends State<LoginScreen> {
                             });
                             return null;
                           },
-                          decoration: InputDecoration(
+                          decoration: const InputDecoration(
                             // enabledBorder: OutlineInputBorder(),
                             // contentPadding: EdgeInsets.zero,
                             hintText: 'Phone Number',
                             prefixIcon: Icon(
                               Icons.phone_android,
-                              color: Theme.of(context).primaryColor,
+                              color: Colors.blueGrey,
                             ),
-                            labelStyle: const TextStyle(color: Colors.black),
-                            contentPadding: const EdgeInsets.symmetric(
+                            labelStyle: TextStyle(color: Colors.black),
+                            contentPadding: EdgeInsets.symmetric(
                                 vertical: 15, horizontal: 20),
-                            enabledBorder: const OutlineInputBorder(
-                                borderRadius: const BorderRadius.all(
-                                    Radius.circular(30.0)),
+                            enabledBorder: OutlineInputBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(30.0)),
                                 borderSide: BorderSide(
                                   color: Colors.grey,
                                 )),
                             focusedBorder: OutlineInputBorder(
-                              borderRadius: const BorderRadius.all(
-                                  const Radius.circular(30.0)),
-                              borderSide: BorderSide(
-                                  color: Theme.of(context).primaryColor,
-                                  width: 2),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(30.0)),
+                              borderSide:
+                                  BorderSide(color: Colors.blueGrey, width: 2),
                             ),
-                            focusColor: Theme.of(context).primaryColor,
+                            focusColor: Colors.blueGrey,
                           )),
                     ),
                     services.sizedBox(h: 20),
@@ -106,13 +105,13 @@ class _LoginScreenState extends State<LoginScreen> {
                         decoration: InputDecoration(
                           suffixIcon: IconButton(
                             icon: _visible
-                                ? Icon(
+                                ? const Icon(
                                     Icons.remove_red_eye_outlined,
-                                    color: Theme.of(context).primaryColor,
+                                    color: Colors.blueGrey,
                                   )
-                                : Icon(
+                                : const Icon(
                                     Icons.visibility_off,
-                                    color: Theme.of(context).primaryColor,
+                                    color: Colors.blueGrey,
                                   ),
                             onPressed: () {
                               setState(() {
@@ -123,9 +122,9 @@ class _LoginScreenState extends State<LoginScreen> {
                           // enabledBorder: OutlineInputBorder(),
                           // contentPadding: EdgeInsets.zero,
                           hintText: 'Password',
-                          prefixIcon: Icon(
+                          prefixIcon: const Icon(
                             Icons.vpn_key_outlined,
-                            color: Theme.of(context).primaryColor,
+                            color: Colors.blueGrey,
                           ),
                           labelStyle: const TextStyle(color: Colors.black),
                           contentPadding: const EdgeInsets.symmetric(
@@ -136,14 +135,13 @@ class _LoginScreenState extends State<LoginScreen> {
                               borderSide: BorderSide(
                                 color: Colors.grey,
                               )),
-                          focusedBorder: OutlineInputBorder(
-                            borderRadius: const BorderRadius.all(
-                                const Radius.circular(30.0)),
-                            borderSide: BorderSide(
-                                color: Theme.of(context).primaryColor,
-                                width: 2),
+                          focusedBorder: const OutlineInputBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(30.0)),
+                            borderSide:
+                                BorderSide(color: Colors.blueGrey, width: 2),
                           ),
-                          focusColor: Theme.of(context).primaryColor,
+                          focusColor: Colors.blueGrey,
                         ),
                       ),
                     ),
@@ -167,14 +165,15 @@ class _LoginScreenState extends State<LoginScreen> {
                     Container(
                       margin: const EdgeInsets.symmetric(vertical: 35),
                       child: isApiCall
-                          ? CircularProgressIndicator(
+                          ? const CircularProgressIndicator(
                               valueColor: AlwaysStoppedAnimation<Color>(
-                                  Theme.of(context).primaryColor),
+                                  Colors.blueGrey),
                               // backgroundColor: Colors.transparent,
                             )
                           : CustomFlatButton(
                               label: "Login",
-                              labelStyle: const TextStyle(fontSize: 20),
+                              labelStyle: const TextStyle(
+                                  fontSize: 20, color: Colors.white),
                               onPressed: () {
                                 if (validateAndSave()) {
                                   setState(() {
@@ -218,7 +217,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 text: 'Create an account',
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.red),
+                                    color: Colors.blue),
                               ),
                             ]),
                           ),

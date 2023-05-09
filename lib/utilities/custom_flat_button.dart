@@ -33,9 +33,7 @@ class CustomFlatButton extends StatelessWidget {
             style: ButtonStyle(
               padding: MaterialStateProperty.all(padding),
               backgroundColor: MaterialStateProperty.all(
-                loading
-                    ? Theme.of(context).disabledColor
-                    : color ?? Theme.of(context).primaryColor,
+                loading ? Theme.of(context).disabledColor : Colors.blueGrey,
               ),
               shape: MaterialStateProperty.all(
                 RoundedRectangleBorder(
@@ -44,7 +42,7 @@ class CustomFlatButton extends StatelessWidget {
               overlayColor: MaterialStateProperty.all(
                   color ?? Theme.of(context).primaryColorDark),
               foregroundColor: MaterialStateProperty.all(
-                Theme.of(context).colorScheme.onPrimary,
+                Colors.blue,
               ),
             ),
             onPressed: loading ? null : onPressed,

@@ -76,7 +76,7 @@ class Services {
             fontFamily: "OpenSans-Bold",
             fontSize: size,
             fontWeight: FontWeight.bold,
-            color: color ?? Colors.deepOrangeAccent,
+            color: color ?? Colors.blueGrey,
           ),
         ),
         Text(
@@ -84,7 +84,7 @@ class Services {
           style: TextStyle(
             fontFamily: "Signatra",
             fontSize: size! - 20.0,
-            color: color ?? Colors.deepOrangeAccent,
+            color: color ?? Colors.blueGrey,
           ),
         ),
         Text(

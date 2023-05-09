@@ -67,7 +67,16 @@ class _HomePageState extends State<HomePage> {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(15),
                     child: Container(
-                      color: Colors.deepOrange,
+                      decoration: const BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [
+                            Color(0xFF1A237E), // Dark Blue
+                            Color(0xFF0D47A1), // Very Dark Blue
+                          ],
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                        ),
+                      ),
                       height: 220,
                       width: MediaQuery.of(context).size.width / .5,
                       child: Column(
@@ -95,7 +104,7 @@ class _HomePageState extends State<HomePage> {
                                     textAlign: TextAlign.center,
                                     style: const TextStyle(
                                       fontSize: 24,
-                                      color: Colors.black87,
+                                      color: Colors.white,
                                     )),
                               ],
                             ),
@@ -115,7 +124,7 @@ class _HomePageState extends State<HomePage> {
                                         // fontFamily: "Anton",
                                         letterSpacing: 3,
                                         fontSize: 18,
-                                        color: Colors.black87,
+                                        color: Colors.white,
                                         // fontWeight: FontWeight.bold,
                                       ),
                                     ),
@@ -125,7 +134,7 @@ class _HomePageState extends State<HomePage> {
                                         // fontFamily: "Anton",
                                         letterSpacing: 3,
                                         fontSize: 18,
-                                        color: Colors.black87,
+                                        color: Colors.white,
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
@@ -147,7 +156,7 @@ class _HomePageState extends State<HomePage> {
                                 fontFamily: "Anton",
                                 letterSpacing: 3,
                                 fontSize: 22,
-                                color: Colors.black87,
+                                color: Colors.white,
                                 // fontWeight: FontWeight.bold,
                               ),
                             ),
